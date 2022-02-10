@@ -1,0 +1,47 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" class="form-control" name="title" > 
+            </div>
+            <div class="form-group">
+                <label>Category:</label>
+                <input type="text" class="form-control" name="category" >
+            </div>
+            
+            <!-- <select class="custom-select" name="category">
+                    <option value=""></option>
+            </select> -->
+        
+            <div class="form-group">
+                <label>Price</label>
+            <input type="text" class="form-control"  name="short-desc">
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea class="form-control" name='desc'></textarea>
+            </div>
+            <div class="form-group">
+                <label>Image:</label>
+                <input type="file" class="form-control" name="file">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success float-left margin-right margin-left" type="submit">Add item</button>
+        
+        </form>
+        
+        </div>
+        
+        </form>
+        </div>
+         <a href=""><button type="button" class="btn btn-success float-left"
+            data-toggle="modal">See Products</button></a>
+    
+</body>
+</html>
+
+{% endblock %}
+

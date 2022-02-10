@@ -1,0 +1,38 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col md-12">
+                <div class="jumbotron p-3">
+                    <h2>Manage Products <a href=""><button type="button"  class="btn btn-success float-right"
+                    data-toggle="modal">Add New Item</button> </h2></a>
+                    <table class="table table-hover table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Sale</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                        </tr>
+                      
+                        <tr>
+                            <td>id </td>
+                            <td>Salvar</td>
+                            <th>Endirim</th>
+                            <td>15 AZN</td>
+                            <td>image</td>
+                                <a href="" class="btn btn-info btn-xs margin-right margin-bottom">Edit</a>
+                                <a href="" class="btn btn-danger btn-xs margin-bottom" 
+                                onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
+                            </td>
+                        </tr>
+                  
+                        
+    </table>
+    </div>
+</body>
+</html>
+
+{% endblock %}
