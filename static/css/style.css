@@ -12,6 +12,11 @@ h1, h2, h3, h4 ,h5 {
 a{
     text-decoration: none;
 }
+
+.active {
+    display: none;
+}
+
 #block-upper{
     background-color:  #FAE8E0;
     display: flex;

@@ -1,12 +1,12 @@
-from run import app
-from flask import render_template
+# app/routes
 
+from flask import render_template
+from run import app
 
 @app.route("/")
-def app_index():
-    return render_template("app/Index.html")
-
+def index():
+    return render_template("app/index.html")
 
 @app.route("/products")
-def app_products():
+def products():
     return render_template("app/Products.html")
