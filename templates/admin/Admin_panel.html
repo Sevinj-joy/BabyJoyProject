@@ -4,12 +4,8 @@
 
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label>Title:</label>
-                <input type="text" class="form-control" name="title" > 
-            </div>
-            <div class="form-group">
-                <label>Category:</label>
-                <input type="text" class="form-control" name="category" >
+                <label>Kateqoriya</label>
+                <input type="text" class="form-control" name="category" value="{{newproduct.product_categ}}" >
             </div>
             
             <!-- <select class="custom-select" name="category">
@@ -17,19 +13,15 @@
             </select> -->
         
             <div class="form-group">
-                <label>Price</label>
-            <input type="text" class="form-control"  name="short-desc">
+                <label>Qiymət</label>
+            <input type="text" class="form-control"  name="short-desc" value="{{newproduct.product_price}}">
             </div>
             <div class="form-group">
-                <label>Description:</label>
-                <textarea class="form-control" name='desc'></textarea>
+                <label>Şəkil</label>
+                <input type="file" class="form-control" name="file" value="{{filename}}">
             </div>
             <div class="form-group">
-                <label>Image:</label>
-                <input type="file" class="form-control" name="file">
-            </div>
-            <div class="form-group">
-                <button class="btn btn-success float-left margin-right margin-left" type="submit">Add item</button>
+                <button class="btn btn-success float-left margin-right margin-left" type="submit">Əlavə et</button>
         
         </form>
         
@@ -38,7 +30,7 @@
         </form>
         </div>
          <a href=""><button type="button" class="btn btn-success float-left"
-            data-toggle="modal">See Products</button></a>
+            data-toggle="modal">Məhsullar</button></a>
     
 </body>
 </html>

@@ -5,11 +5,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///myproducts.db'
 db = SQLAlchemy(app)
 
-class products(db.Model):
-    id=db.Column(db.Integer, primary_key=True)
-    product_categ=db.Column(db.String(70), unique=True, nullable=False)
-    product_price=db.Column(db.Integer,unique=True, nullable=False)
-    product_image=db.Column(db.String(50))
+
 
 from app.routes import *
 

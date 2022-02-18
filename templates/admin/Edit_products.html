@@ -12,23 +12,24 @@
                         <tr>
                             <th>ID</th>
                             <th>Category</th>
-                            <th>Sale</th>
                             <th>Price</th>
                             <th>Image</th>
                         </tr>
-                      
+                      {% for product in products %}
                         <tr>
-                            <td>id </td>
-                            <td>Salvar</td>
-                            <th>Endirim</th>
-                            <td>15 AZN</td>
-                            <td>image</td>
-                                <a href="" class="btn btn-info btn-xs margin-right margin-bottom">Edit</a>
-                                <a href="" class="btn btn-danger btn-xs margin-bottom" 
-                                onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
-                            </td>
+                            <td>{{product.id}}</td>
+                            <td>{{product.product_categ}}</td>
+                            <td>{{product.product_price}}</td>
+                            <td>{{product.product_image}}</td>
+                               <td>
+                                   <a href="" class="btn btn-info btn-xs margin-right margin-bottom">Edit</a>
+                               </td> 
+                                <td>
+                                    <a href="" class="btn btn-danger btn-xs margin-bottom" 
+                                    onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
+                                </td>
                         </tr>
-          
+                {% endfor %}
     </table>
     </div>
 </body>

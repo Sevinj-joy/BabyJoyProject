@@ -7,6 +7,8 @@ from run import app
 def index():
     return render_template("app/index.html")
 
+
 @app.route("/products")
-def products():
+def app_products():
+    from models import Products
     return render_template("app/Products.html")
