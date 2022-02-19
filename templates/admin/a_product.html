@@ -1,0 +1,58 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col md-12">
+                <div class="jumbotron p-3">
+                    <h2>Manage Products</h2>
+                        <form action="/admin/products" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Category:</label>
+                                <input type="text" class="form-control" name="products_category">
+                            </div>
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="text" class="form-control" name="products_price">
+                            </div>
+                            <div class="form-group">
+                                <label>Image:</label>
+                                <input type="file" class="form-control" name="products_img">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success float-left margin-right margin-left" type="submit">Add item</button>
+                            </div>
+                        </form>
+                    </div>
+                
+                    <!-- Tabel -->
+                    <div class="row mt-5">
+                        <div class="col md-12">
+                            <div class="jumbotron p-3">
+                                <table class="table table-hover table-dark">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Image</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                    {% for product in products %}
+                                    <tr>
+                                        <td>{{product.id}}</td>
+                                        <td>{{product.product_categ}}</td>
+                                        <td>{{product.product_price}}</td>
+                                        <th><img width="100px" src="/static/uploads/{{product.product_image}}" alt=""></th>
+                                        <td><a href="/admin/products/update/{{product.id}}" class="btn btn-info btn-xs margin-right margin-bottom">Edit</a></td>
+                                        <td><a href="/admin/products/delete/{{product.id}}" class="btn btn-danger btn-xs margin-bottom">Delete</a></td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% endblock %}
