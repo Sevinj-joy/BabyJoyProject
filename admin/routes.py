@@ -1,27 +1,28 @@
 from run import app,db
 from flask import render_template,redirect,request
 import os
-from fileinput import filename
 
+
+          
 @app.route("/products")
 def app_products():
     from models import Products
     products=Products.query.all()
-    return render_template("app/products.html")
+    return render_template("app/products.html",products=products)
 
 # Products
 
-@app.route("/admin/products",method=['GET', 'POST'])
+@app.route("/admin/products",methods=['GET', 'POST'])
 def admin_products():
     from models import Products
-    products =Products.query.all()
+    products = Products.query.all()
     if request.method=='POST':
         file=request.files['products_img']
         filename=file.filename
         file.save(os.path.join('static/uploads',filename))
         product_categ=request.form["products_category"]
         product_price=request.form["products_price"]
-        product=Products(
+        product= Products(
            product_categ=product_categ,
            product_price=product_price,
            product_image=filename
@@ -29,7 +30,7 @@ def admin_products():
         db.session.add(product)
         db.session.commit()
         return redirect("/admin/products")
-    return render_template("admin/a_product.html", products=products)
+    return render_template("admin/a_product.html", product=product)
 
 # Products delete
 @app.route("/admin/products/delete/<int:id>")

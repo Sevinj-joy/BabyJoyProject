@@ -17,6 +17,17 @@
 .navbar-nav-menu ul > li:nth-child(5):hover .boys-girls-div-panel{
     display: block;  
 }
+
+.items img:hover{
+   width: 280px;
+   height: 363px;
+   transform: scale(1.2);    
+}
+.zoom:hover{
+    width: 328px;
+    height: 515px;
+    transform: scale(2s);
+}
 .button-37:hover {
     background-color: #D7A1F9;
      box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;

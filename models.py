@@ -2,7 +2,6 @@ from run import db
 
 # Products
 
-
 class Products(db.Model):
     id=db.Column(db.Integer, primary_key=True)
     product_categ=db.Column(db.String(70), unique=True, nullable=False)

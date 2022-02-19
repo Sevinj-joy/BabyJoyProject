@@ -12,7 +12,9 @@ h1, h2, h3, h4 ,h5 {
 a{
     text-decoration: none;
 }
-
+li{
+    list-style-type: none;
+}
 .active {
     display: none;
 }
@@ -33,7 +35,6 @@ a{
 }
 #block-upper :nth-child(2){
     width: 560px;
- 
 }
 #account-navbar {
     width: 100%;
@@ -45,7 +46,6 @@ a{
     display: flex;
     justify-content: space-between;
 }
-
 #account-navbar ul{
     margin:0px;
     margin-top: 15px;
@@ -54,7 +54,6 @@ a{
     list-style-type: none;
     padding-inline-start: 0px; 
 }
-
 #account-navbar ul a{
     color:  #67595E;
     text-decoration: none;
@@ -213,6 +212,7 @@ hr{
     display: flex;
     justify-content: space-around; 
 }
+
 .items{
     margin-top: 60px;
     width: 270px;
@@ -220,7 +220,10 @@ hr{
     object-fit: cover;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 1.s;
+  
 }
+
 .items img{
     width: 100%;
     height: 100%;
